@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>eDecorator: Your way to stylish living.</title>
+  <link rel='stylesheet' type='text/css' href='css/reset.css'>
+  <link rel='stylesheet' type='text/css' href='css/styles.css'>
+  <link rel='stylesheet' type='text/css' href='css/findmystyle.css'>
+</head>
+
+<body>
+  <nav class="header">
+    <ul>
+      <li><a href="gallery.html">Browse Gallery</a></li>
+      <li><a href="furniture.html">Shop For Furniture</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <div class="quiz-question" question="lamp">
+      <h1>Which lamp lights up your heart?</h1>
+      <img src="images/quiz/lamp1.jpg" class="quiz-option" choice="1">
+      <img src="images/quiz/lamp2.jpg" class="quiz-option" choice="2">
+      <img src="images/quiz/lamp3.jpg" class="quiz-option" choice="3">
+      <img src="images/quiz/lamp4.jpg" class="quiz-option" choice="4">
+    </div>
+
+    <div class="quiz-question" question="bed">
+      <h1>Which bed brings you the most joy?</h1>
+      <img src="images/quiz/bed1.jpg" class="quiz-option" choice="1">
+      <img src="images/quiz/bed2.jpg" class="quiz-option" choice="2">
+    </div>
+
+    <button class="flat-button" onclick="calculateStyle()">CALCULATE STYLE</button>
+    <h1 id="quiz-results"></h1>
+  </main>
+
+  <footer>
+    &copy; 2017 eDecorator,Inc. <a href="about.html">All rights reserved.</a>
+  </footer>
+  <script src='js/findmystyle.js'></script>
+</body>
+</html>

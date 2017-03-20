@@ -1,0 +1,54 @@
+body {
+	font-family: Georgia, serif;
+	height: 100%;
+	margin: 0;
+	text-align: center;
+	width: 100%;
+}
+
+nav.header {
+  height: 200px;
+}
+
+nav.header li {
+  float: left;
+}
+
+.headline {
+  padding: 250px 0;
+	margin: 30px;
+  font-family:'sans-serif',Trebuchet MS, Helvetica;
+  background-image:
+  url("../images/banner.jpg");
+  background-size: cover;
+  color:#ffffff;
+  background-position: center top;
+  text-shadow: 0 1px #000000;
+}
+
+.headline h1 {
+  color: #FFF;
+  font-size: 50px;
+  margin-bottom: 70px;
+}
+
+.flat-button {
+  cursor: pointer;
+  color: black;
+  font-size: 15px;
+  text-decoration: none;
+  padding: 24px 80px;
+  background-color: #FFF;
+  opacity: .8;
+}
+
+.flat-button:hover {
+  opacity: .9;
+}
+
+footer {
+  clear: both;
+	color: DarkSlateGray;
+	font-size: 12px;
+  opacity: 0.8;
+}

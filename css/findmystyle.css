@@ -1,0 +1,30 @@
+.quiz-question {
+	width: 644px;
+	margin: auto;
+}
+.quiz-question h1 {
+	font-size: 24px;
+	clear: both;
+}
+.quiz-question img {
+	float: left;
+	height: 300px;
+	width: 300px;
+	border: 1px solid #CCC;
+	margin: 10px;
+	opacity: 1;
+}
+.quiz-question img:hover {
+	cursor: pointer;
+	height: 304px;
+	width: 304px;
+	margin: 8px;
+	opacity: .9;
+}
+.quiz-question img.selected {
+	border: 5px solid pink;
+	height: 300px;
+	width: 300px;
+	margin: 6px;
+	opacity: .9;
+}
