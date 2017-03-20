@@ -42,16 +42,16 @@ function calculateStyle() {
     results.innerHTML = "YOU ARE CRAZY HIP!";
   }
   else if (choices["lamp"] == "3" && choices["bed"] == "1") {
-    results.innerHTML = "YOUR STYLE IS TRANSITIONAL";
+    results.innerHTML = "YOUR STYLE IS TRADITIONAL!";
   }
   else if (choices["lamp"] == "1" && choices["bed"] == "2") {
-    results.innerHTML = "YOUR STYLE IS MODERN";
+    results.innerHTML = "YOUR STYLE IS MODERN!";
   }
   else if (choices["lamp"] == "2" && choices["bed"] == "1") {
-    results.innerHTML = "YOUR STYLE IS ECLECTIC";
+    results.innerHTML = "YOUR STYLE IS ECLECTIC!";
   }
   else {
-    results.innerHTML = "YOU HAVE NO STYLE :(";
+    results.innerHTML = "YOU HAVE NO SENSE STYLE...";
   }
   localStorage.setItem("results", results.innerHTML);
 }
