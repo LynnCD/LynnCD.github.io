@@ -19,16 +19,28 @@ function quizSelection() {
 var numQuestions = document.getElementsByClassName('quiz-question').length;
 
 function calculateStyle() {
+  var results = document.getElementById('quiz-results');
+
   if (choices.size < numQuestions) {
-    alert("answer all the questions!");
+    results.classList.add('invalid');
+    results.innerHTML = "PLEASE ANSWER ALL QUESTIONS!!!";
     return;
   }
+  results.classList.remove('invalid');
 
-  var results = document.getElementById('quiz-results');
   if (choices.get("lamp") == "4" && choices.get("bed") == "2") {
     results.innerHTML = "YOU ARE CRAZY HIP!";
   }
+  else if (choices.get("lamp") == "3" && choices.get("bed") == "1") {
+    results.innerHTML = "YOUR STYLE IS TRANSITIONAL";
+  }
+  else if (choices.get("lamp") == "1" && choices.get("bed") == "2") {
+    results.innerHTML = "YOUR STYLE IS MODERN";
+  }
+  else if (choices.get("lamp") == "2" && choices.get("bed") == "1") {
+    results.innerHTML = "YOUR STYLE IS ECLECTIC";
+  }
   else {
-    results.innerHTML = "CONGRATS";
+    results.innerHTML = "YOU HAVE NO STYLE :(";
   }
 }
