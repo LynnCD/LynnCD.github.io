@@ -3,7 +3,17 @@ for (var i = 0; i < allOptions.length; i++) {
     allOptions[i].addEventListener('click', quizSelection, false);
 }
 
-var choices = {};
+var choices = JSON.parse(localStorage.getItem("choices")) || {};
+for (var key in choices) {
+  if (choices.hasOwnProperty(key)) {
+    var question = document.querySelector('[question="' + key + '"]');
+    var selected = question.querySelector('[choice="' + choices[key] + '"]');
+    selected.classList.add('selected');
+  }
+}
+
+var results = document.getElementById('quiz-results');
+results.innerHTML = localStorage.getItem("results") || '';
 
 function quizSelection() {
     var options = this.parentElement.getElementsByClassName('quiz-option');
@@ -14,13 +24,13 @@ function quizSelection() {
 
     var key = this.parentElement.attributes.question.value;
     choices[key] = this.attributes.choice.value;
+
+    localStorage.setItem("choices", JSON.stringify(choices));
 }
 
 var numQuestions = document.getElementsByClassName('quiz-question').length;
 
 function calculateStyle() {
-  var results = document.getElementById('quiz-results');
-
   if (Object.keys(choices).length < numQuestions) {
     results.classList.add('invalid');
     results.innerHTML = "PLEASE ANSWER ALL QUESTIONS!!!";
@@ -43,4 +53,5 @@ function calculateStyle() {
   else {
     results.innerHTML = "YOU HAVE NO STYLE :(";
   }
+  localStorage.setItem("results", results.innerHTML);
 }
